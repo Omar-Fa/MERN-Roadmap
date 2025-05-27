@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+#buttons button {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+#results {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+#score {
+  margin-top: 1rem;
+  font-weight: bold;
+}
