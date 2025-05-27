@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fizz Buzz Problem</title>
+    <script>
+      // Prompt the user for input
+      let userInput = prompt('Enter a number:');
+
+      // Convert the input to a number
+      let num = parseInt(userInput);
+
+      // Loop from 1 to the entered number
+      for (let i = 1; i <= num; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+          console.log('FizzBuzz');
+        } else if (i % 3 === 0) {
+          console.log('Fizz');
+        } else if (i % 5 === 0) {
+          console.log('Buzz');
+        } else {
+          console.log(i);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Fizz Buzz Problem</h1>
+  </body>
+</html>
