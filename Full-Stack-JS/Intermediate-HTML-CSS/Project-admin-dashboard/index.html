@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project: Admin Dashboard</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="logo">
+          <span class="material-icons">dashboard</span>
+          <h1>Dashboard</h1>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li>
+              <span class="material-icons">home</span>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <span class="material-icons">account_circle</span>
+              <a href="#">Profile</a>
+            </li>
+            <li>
+              <span class="material-icons">chat</span>
+              <a href="#">Messages</a>
+            </li>
+            <li>
+              <span class="material-icons">history</span>
+              <a href="#">History</a>
+            </li>
+            <li>
+              <span class="material-icons">task</span>
+              <a href="#">Tasks</a>
+            </li>
+            <li>
+              <span class="material-icons">groups</span>
+              <a href="#">Communities</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="secondary-nav">
+          <ul>
+            <li>
+              <span class="material-icons">settings</span>
+              <a href="#">Settings</a>
+            </li>
+            <li>
+              <span class="material-icons">help_center</span>
+              <a href="#">Support</a>
+            </li>
+            <li>
+              <span class="material-icons">verified_user</span>
+              <a href="#">Privacy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Header -->
+      <div class="header">
+        <div class="search-bar">
+          <span class="material-icons">search</span>
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="user-info">
+          <span class="material-icons">notifications_active</span>
+          <img
+            src="https://avatars.githubusercontent.com/u/1?v=4"
+            alt="User avatar"
+            class="avatar small"
+          />
+          <span class="username">Morgan Oakley</span>
+        </div>
+        <div class="greeting">
+          <img
+            src="https://avatars.githubusercontent.com/u/1?v=4"
+            alt="User avatar"
+            class="avatar large"
+          />
+          <div>
+            <p>Hi there,</p>
+            <h2>Morgan Oakley (@morgan)</h2>
+          </div>
+        </div>
+        <div class="actions">
+          <button>New</button>
+          <button>Upload</button>
+          <button>Share</button>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="projects">
+          <h3>Your Projects</h3>
+          <div class="project-cards">
+            <div class="card">
+              <h4>Super Cool Project</h4>
+              <p>
+                Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin
+                nibh erat, id facilisis felis accumsan nec.
+              </p>
+              <div class="card-actions">
+                <span class="material-icons">star_border</span>
+                <span class="material-icons">visibility</span>
+                <span class="material-icons">share</span>
+              </div>
+            </div>
+            <div class="card">
+              <h4>Impossible App</h4>
+              <p>
+                In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a
+                placerat velit sagittis id.
+              </p>
+              <div class="card-actions">
+                <span class="material-icons">star_border</span>
+                <span class="material-icons">visibility</span>
+                <span class="material-icons">share</span>
+              </div>
+            </div>
+            <div class="card">
+              <h4>Ad Blocker</h4>
+              <p>
+                Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus
+                vel, pharetra hendrerit felis. Aliquam sed malesuada eros.
+              </p>
+              <div class="card-actions">
+                <span class="material-icons">star_border</span>
+                <span class="material-icons">visibility</span>
+                <span class="material-icons">share</span>
+              </div>
+            </div>
+            <div class="card">
+              <h4>Less Cool Project</h4>
+              <p>
+                Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque
+                sed dolor tincidunt, consectetur sapien et, facilisis dolor.
+              </p>
+              <div class="card-actions">
+                <span class="material-icons">star_border</span>
+                <span class="material-icons">visibility</span>
+                <span class="material-icons">share</span>
+              </div>
+            </div>
+            <div class="card">
+              <h4>Easy Peasy App</h4>
+              <p>
+                Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim
+                urna eget accumsan aliquam. Curabitur dignissim nisi in tortor
+                commodo.
+              </p>
+              <div class="card-actions">
+                <span class="material-icons">star_border</span>
+                <span class="material-icons">visibility</span>
+                <span class="material-icons">share</span>
+              </div>
+            </div>
+            <div class="card">
+              <h4>Money Maker</h4>
+              <p>
+                Praesent convallis, libero quis congue elementum, nunc ante
+                faucibus sapien, ac scelerisque tortor purus sit amet ex.
+              </p>
+              <div class="card-actions">
+                <span class="material-icons">star_border</span>
+                <span class="material-icons">visibility</span>
+                <span class="material-icons">share</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="announcements">
+          <h3>Announcements</h3>
+          <div class="announcements-card">
+            <div class="announcement">
+              <h5>Site Maintenance</h5>
+              <p>
+                Vestibulum condimentum tellus lacus, in accumsan elit maximus
+                ac. Donec hendrerit sodales congue.
+              </p>
+            </div>
+            <hr />
+            <div class="announcement">
+              <h5>Community Share Day</h5>
+              <p>
+                Nam vel lectus tincidunt, rutrum nulla ea, omnis libero. Aliquam
+                dictum accumsan porttitor.
+              </p>
+            </div>
+            <hr />
+            <div class="announcement">
+              <h5>Updated Privacy Policy</h5>
+              <p>
+                Phasellus dificilut nisi eget elit consectetur, eget condimentum
+                ante auctor. Cras fringida sagittis sem in mattis...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="trending">
+          <h3>Trending</h3>
+          <div class="trending-card">
+            <div class="trending-item">
+              <img
+                src="https://avatars.githubusercontent.com/u/2?v=4"
+                alt="User avatar"
+                class="avatar small"
+              />
+              <div>
+                <p class="handle">@regan</p>
+                <p class="project">World Peace Builder</p>
+              </div>
+            </div>
+            <div class="trending-item">
+              <img
+                src="https://avatars.githubusercontent.com/u/1?v=4"
+                alt="User avatar"
+                class="avatar small"
+              />
+              <div>
+                <p class="handle">@morgan</p>
+                <p class="project">Super Cool Project</p>
+              </div>
+            </div>
+            <div class="trending-item">
+              <img
+                src="https://avatars.githubusercontent.com/u/3?v=4"
+                alt="User avatar"
+                class="avatar small"
+              />
+              <div>
+                <p class="handle">@kendall</p>
+                <p class="project">Life Changing App</p>
+              </div>
+            </div>
+            <div class="trending-item">
+              <img
+                src="https://avatars.githubusercontent.com/u/4?v=4"
+                alt="User avatar"
+                class="avatar small"
+              />
+              <div>
+                <p class="handle">@alex</p>
+                <p class="project">No Traffic Maker</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
