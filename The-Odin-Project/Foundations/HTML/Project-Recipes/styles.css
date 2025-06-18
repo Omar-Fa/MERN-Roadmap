@@ -1,0 +1,208 @@
+/* General Body Styles for Centering and Basic Readability (no change from previous) */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* CONTAINER for Recipe Pages - (no change from previous) */
+.container {
+  width: 100%;
+  max-width: 900px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles for the Header (containing the main H1 on index.html) (no change from previous) */
+header {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* For the H1 on ALL pages (no change from previous) */
+h1 {
+  font-size: 3em;
+  color: #0d47a1;
+  margin: 0;
+}
+
+/* Styles for the Section containing Recipe Links on index.html */
+/* IMPORTANT: This rule now handles alignment of the entire list. */
+body > section {
+  width: 100%;
+  max-width: 800px; /* Increased max-width to give more space for aligned items */
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* This centers the UL, which then centers the LI blocks */
+}
+
+h2 {
+  font-size: 2em;
+  color: #1a237e;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* Styles for the Unordered List of Recipes on Homepage */
+ul {
+  list-style: none; /* REMOVE BULLET POINTS */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox for the list itself */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center the list items horizontally within the UL */
+  gap: 25px; /* Space between the recipe blocks */
+}
+
+/* Styles for individual List Items on Homepage */
+li {
+  margin-bottom: 0; /* Remove previous margin between list items */
+  flex-basis: calc(
+    33.33% - 25px
+  ); /* Approximately 3 items per row on wider screens, accounting for gap */
+  max-width: 250px; /* Max width for each recipe block */
+}
+
+/* Styles for the Recipe Links themselves (which now act as blocks) */
+section ul li a {
+  display: flex; /* Already flex for image/text alignment */
+  flex-direction: column; /* Stack image on top of text within the block */
+  align-items: center; /* Center items (image and text) horizontally within the link block */
+  text-align: center; /* Center the text for recipe name */
+  padding: 15px; /* Increased padding */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1.2em; /* Slightly smaller font for text below image */
+  color: #333;
+  height: 100%; /* Ensures all blocks are the same height if content varies slightly */
+}
+
+section ul li a:hover {
+  background-color: #e0f2f7;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+/* Recipe Image Styles (Thumbnail on Homepage) */
+.recipe-thumbnail {
+  width: 120px; /* Larger image for homepage */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px; /* Space between image and text */
+  margin-right: 0; /* Remove right margin since text is below */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the "Home" Navigation Link on Recipe Pages (no change from previous) */
+nav {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.home-link {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.home-link:hover {
+  background-color: #45a049;
+  text-decoration: none;
+}
+
+/* Recipe Image Styles (for individual recipe pages - no change from previous) */
+.recipe-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for Section Headings on Recipe Pages (Description, Ingredients, Steps) (no change from previous) */
+section h2 {
+  /* This rule needs to be specific enough not to clash with homepage h2 */
+  font-size: 2.2em;
+  color: #1a237e;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* Styles for paragraphs in the description (no change from previous) */
+.description p {
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 700px;
+  margin: 0 auto 15px auto;
+}
+
+/* Styles for lists (Ingredients and Steps) on Recipe Pages (no change from previous) */
+.ingredients ul,
+.steps ol {
+  list-style-position: inside;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  text-align: left;
+}
+
+.ingredients ul li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.steps ol li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Styles for all links (on index.html and within recipe pages) (no change from previous) */
+a {
+  text-decoration: none;
+  color: #2196f3;
+  font-size: 1.5em; /* This is a general fallback. Specific 'a' rules will override. */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
