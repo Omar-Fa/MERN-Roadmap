@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=DejaVu+Sans&display=swap'); 
+
+.odd-element {
+  background-color: hsl(350, 100%, 90%); /* Light red/pink using HSL */
+  font-family: Verdana, 'DejaVu Sans', sans-serif; /* Corrected 'Veradana' to 'Verdana' */
+}
+
+#second {
+  color: rgb(0, 0, 255); /* Blue using RGB */
+  font-size: 36px;
+}
+
+/* New class for the third element's specific style */
+.cooler-text {
+  font-size: 24px;
+}
+
+#fourth {
+  background-color: #98fb98; /* Light green using HEX */
+  font-size: 24px;
+  font-weight: bold;
+}
