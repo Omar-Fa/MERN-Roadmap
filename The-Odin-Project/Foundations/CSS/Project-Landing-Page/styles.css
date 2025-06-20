@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1024px; /* Fixed max-width for content */
+  margin: 0 auto;
+  padding: 0 1rem; /* Padding on sides */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Header Section */
+.header {
+  background-color: #1f2937;
+  color: #f9faf8;
+  padding: 1rem 0;
+}
+
+.header .container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap if needed */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-size: 1.5rem; /* 24px */
+  font-weight: bold;
+  color: #f9faf8;
+  border-radius: 0.25rem;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.header-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allows links to wrap */
+  gap: 1.5rem;
+  justify-content: flex-end; /* Align to right */
+  flex-grow: 1; /* Allow navigation to take space */
+}
+
+.header-nav a {
+  color: #e5e7eb;
+  font-size: 1.125rem; /* 18px */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  border-radius: 0.25rem;
+}
+
+.header-nav a:hover {
+  color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #1f2937;
+  color: #f9faf8;
+  padding: 5rem 0;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center; /* Center items in column */
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1 1 auto; /* Allow content to grow/shrink */
+  text-align: center; /* Center text by default */
+  max-width: 600px; /* Limit width for better readability */
+}
+
+/* Hero content aligns left when enough space */
+.hero .container:not([style*='flex-direction: column']) .hero-content {
+  text-align: left;
+}
+
+.hero-title {
+  font-size: 3rem; /* 48px */
+  font-weight: 900;
+  color: #f9faf8;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+  border-radius: 0.25rem;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem; /* 18px */
+  color: #e5e7eb;
+  margin-bottom: 2rem;
+  border-radius: 0.25rem;
+}
+
+.hero-button {
+  background-color: #3882f6;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-button:hover {
+  background-color: #2563eb;
+}
+
+.hero-image-placeholder {
+  flex: 1 1 300px; /* Allows image to grow/shrink, with a basis of 300px */
+  width: 100%; /* Take full width on smaller screens */
+  max-width: 500px; /* Limit max width for desktop layout */
+  height: 12rem; /* h-48 */
+  background-color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d1d5db;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevent shrinking too much */
+}
+
+/* Information Section */
+.info-section {
+  background-color: #ffffff;
+  padding: 5rem 0;
+}
+
+.info-section .container {
+  text-align: center;
+}
+
+.info-title {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 900;
+  color: #1f2937;
+  margin-bottom: 4rem;
+  border-radius: 0.25rem;
+}
+
+.info-grid {
+  display: grid;
+  /* Auto-fit and minmax will create columns based on available space */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center; /* Center grid items */
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px; /* Limit item width for better stacking */
+}
+
+.info-image-box {
+  width: 10rem; /* w-40 */
+  height: 10rem; /* h-40 */
+  border: 4px solid #3882f6;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-image-box div {
+  color: #9ca3af;
+}
+
+.info-text {
+  color: #1f2937;
+  text-align: center;
+  font-size: 1.125rem; /* 18px */
+  border-radius: 0.25rem;
+}
+
+/* Quote Section */
+.quote-section {
+  background-color: #e5e7eb;
+  padding: 5rem 0;
+}
+
+.quote-section .container {
+  padding: 0 1rem;
+}
+
+.quote-text {
+  text-align: left;
+  font-size: 2.25rem; /* 36px */
+  font-style: italic;
+  font-weight: 300;
+  color: #1f2937;
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.625;
+  border-radius: 0.25rem;
+}
+
+.quote-cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.5rem; /* 24px */
+  font-weight: bold;
+  color: #1f2937;
+  text-align: right;
+  border-radius: 0.25rem;
+  padding-right: 1rem; /* Adjust for better alignment with quote */
+}
+
+/* Call to Action Section */
+.cta-section {
+  background-color: #ffffff;
+  padding: 5rem 0;
+}
+
+.cta-box {
+  background-color: #3882f6;
+  color: white;
+  padding: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap naturally */
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  gap: 1.5rem; /* Space between content and button */
+}
+
+.cta-content {
+  flex: 1 1 300px; /* Allows content to take space, with basis of 300px */
+  text-align: center;
+  min-width: 250px; /* Ensure content doesn't shrink too much */
+}
+
+/* Center the text within content when it's not flexing */
+.cta-box:not([style*='flex-wrap: wrap']) .cta-content {
+  text-align: left;
+}
+
+.cta-title {
+  font-size: 1.875rem; /* 30px */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.cta-subtitle {
+  font-size: 1.125rem; /* 18px */
+  border-radius: 0.25rem;
+}
+
+.cta-button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.75rem 2.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: #3882f6;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #1f2937;
+  color: #e5e7eb;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.footer .container {
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 1.125rem; /* 18px */
+  border-radius: 0.25rem;
+}
