@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project: Etch-a-Sketch</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js" defer></script>
+
+  </head>
+  <body>
+    <div class="controls">
+      <label
+        >Grid Width: <input type="number" id="gridWidth" value="960"
+      /></label>
+      <label
+        >Grid Height: <input type="number" id="gridHeight" value="960"
+      /></label>
+      <label
+        >Square Size: <input type="number" id="squareSize" value="60"
+      /></label>
+      <label
+        >Color Mode:
+        <select id="colorMode">
+          <option value="black">Black</option>
+          <option value="rgb">RGB Darken</option>
+        </select>
+      </label>
+      <button id="eraserBtn">🧽 Eraser: Off</button>
+    </div>
+    <div id="container"></div>
+  </body>
+</html>
