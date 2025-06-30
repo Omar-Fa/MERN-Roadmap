@@ -1,70 +1,57 @@
 // console.log('Hello World');
 
 function getComputerChoice() {
-  const choices = ['rock', 'paper', 'scissors'];
-  const choice = Math.floor(Math.random() * choices.length);
-  return choices[choice];
+  const randomNum = Math.floor(Math.random() * 3); // 0, 1, 2
+  if (randomNum === 0) return 'rock';
+  if (randomNum === 1) return 'paper';
+  return 'scissors';
 }
 
 function getHumanChoice() {
-  const input = prompt(
-    'Enter your choice: rock, paper, or scissors'
-  ).toLowerCase();
-  return input;
-}
-
-let humanScore = 0;
-let computerScore = 0;
-
-function playRound(humanChoice, computerChoice) {
-  const player = humanChoice.toLowerCase();
-  const computer = computerChoice;
-
-  if (player === computer) {
-    console.log(`It's a tie! You both chose ${player}`);
-    return;
-  }
-
-  if (
-    (player === 'rock' && computer === 'scissors') ||
-    (player === 'scissors' && computer === 'paper') ||
-    (player === 'paper' && computer === 'rock')
-  ) {
-    humanScore++;
-    console.log(`You win! ${player} beats ${computer}`);
-  } else {
-    computerScore++;
-    console.log(`You lose! ${computer} beats ${player}`);
-  }
+  return prompt('Enter rock, paper, or scissors:').toLowerCase();
 }
 
 function playGame() {
-  let rounds = parseInt(prompt('How many rounds would you like to play?'));
+  let humanScore = 0;
+  let computerScore = 0;
 
-  if (isNaN(rounds) || rounds <= 0) {
-    console.log('Invalid number of rounds. Defaulting to 5 rounds.');
-    rounds = 5;
+  function playRound(humanChoice, computerChoice) {
+    const choice = humanChoice.toLowerCase();
+
+    if (choice === computerChoice) {
+      console.log("It's a tie!");
+      return;
+    }
+
+    if (
+      (choice === 'rock' && computerChoice === 'scissors') ||
+      (choice === 'paper' && computerChoice === 'rock') ||
+      (choice === 'scissors' && computerChoice === 'paper')
+    ) {
+      humanScore++;
+      console.log(`You win! ${choice} beats ${computerChoice}`);
+    } else {
+      computerScore++;
+      console.log(`You lose! ${computerChoice} beats ${choice}`);
+    }
   }
-  humanScore = 0;
-  computerScore = 0;
 
-  for (let i = 1; i <= rounds; i++) {
-    console.log(`\nRound ${i}`);
+  for (let i = 1; i <= 5; i++) {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
+
+    console.log(`\nRound ${i}:`);
     playRound(humanSelection, computerSelection);
+    console.log(`Score → You: ${humanScore}, Computer: ${computerScore}`);
   }
 
-  console.log('\nGame Over!');
-  console.log(`Your Score: ${humanScore}`);
-  console.log(`Computer Score: ${computerScore}`);
-
+  console.log('\nFinal Result:');
   if (humanScore > computerScore) {
     console.log('🎉 You win the game!');
   } else if (computerScore > humanScore) {
-    console.log('😞 You lose the game.');
+    console.log('😢 You lose the game!');
   } else {
-    console.log("🤝 It's a draw!");
+    console.log("🤝 It's a tie overall!");
   }
 }
 
